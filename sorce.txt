@@ -1,0 +1,15 @@
+shanghai 200
+shanghai 220
+shanghai 100
+shanghai 160
+beijing 180
+beijing 170
+beijing 200
+beijing 176
+beijing 210
+changsha 300
+changsha 330
+changsha 200
+changsha 230
+changsha 400
+changsha 320
