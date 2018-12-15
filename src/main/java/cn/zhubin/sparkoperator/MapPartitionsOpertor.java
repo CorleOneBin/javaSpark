@@ -1,17 +1,12 @@
 package cn.zhubin.sparkoperator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.VoidFunction;
+
+import java.util.*;
 
 public class MapPartitionsOpertor {
 	public static void main(String[] args) {
@@ -27,13 +22,13 @@ public class MapPartitionsOpertor {
 		sorceMap.put("wangyujuan", 200);
 		
 		//mapPartitions
-		//map���ӣ�һ�ξʹ���һ��partitions��һ������
-		//mapPartitions���ӣ�һ�δ���һ��partitions�����е�����
+		//map???????��???????partitions?????????
+		//mapPartitions???????��??????partitions?????��?????
 		
-		//�Ƽ���ʹ�ó���
-		//������RDD�����ݲ����ر�࣬��ô����MapPartitons���Ӵ���map���ӣ����Լӿ촦���ٶ�
-		//����100�������ݣ�һ��partition�������10�������ݣ�������ʹ��
-		//�ڴ������partions̫��
+		//???????��???
+		//??????RDD????????????????????MapPartitons???????map????????????????
+		//????100????????????partition???????10??????????????????
+		//????????partions???
 		
 		JavaRDD<Integer> sorceRDD = namesRDD.mapPartitions(new FlatMapFunction<Iterator<String>, Integer>() {
 

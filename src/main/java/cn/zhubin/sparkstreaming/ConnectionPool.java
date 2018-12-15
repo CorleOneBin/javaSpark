@@ -1,7 +1,5 @@
 package cn.zhubin.sparkstreaming;
 
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,7 +12,6 @@ import java.util.LinkedList;
  *
  */
 public class ConnectionPool {
-
     //队列
     private static LinkedList<Connection> connectionQueue;
 
@@ -37,6 +34,7 @@ public class ConnectionPool {
                     connectionQueue.push(conn);
                 }
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
